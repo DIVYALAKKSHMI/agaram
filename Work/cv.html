@@ -1,37 +1,60 @@
 <html>
     <head>
-        <link rel ="stylesheet" href="../cv.css"/>
+        <link rel ="stylesheet" href="cv.css"/>
     </head>
     <body>
         <form>
-            <h2>Resume</h2>
+            <h2>RESUME</h2>
             <label>Name :</label> <input type ="text"/>
             <label>Jobtitle :</label> <input type ="text"/>
             <label>Email :</label> <input type = "email"/><br>
             <br>
-            <label>Objective :</label> <textarea rows="4" cols ="25" ></textarea><br>
+            <label>Objective :</label> <textarea rows="4" cols ="60" ></textarea><br>
         <div class = "expe">
             <h4>Experience</h4>
             <label>Company name :</label> <input type = "text"> <label> Role played :</label> <input type = "text"/>
             <label>Years of Experience :</label> <select name = "exp">
-                <option> >1 year </option>
-                <option> <1 and >2 years</1> </option>
-                <option> >= 3 years </option> </select><br>
+                <option> less than 1 year </option>
+                <option> 1-3 years</option>
+                <option> more than 3 years </option> </select><br>
             <br>
-            <label>Job -description :</label> <textarea cols = "50" rows = "6"></textarea>          
+            <label>Job -description :</label> <textarea cols = "50" rows = "6"></textarea> <br>
+            <br>
+            <label>Company name :</label> <input type = "text"> <label> Role played :</label> <input type = "text"/>
+            <label>Years of Experience :</label> <select name = "exp">
+                <option> less than 1 year </option>
+                <option> 1-3 years</option>
+                <option> more than 3 years </option> </select><br>
+            <br>
+            <label>Job -description :</label> <textarea cols = "50" rows = "6"></textarea>            
         </div>
         <div>
             <h4>Education </h4>
-            <label>Institute Name :</label> <input type = "text"><br>
+            <label>Institute Name :</label> <input type = "text">
+            <label>Grade :</label> <select name = "grade">
+            <option>SSLC</option>
+            <option>HSC</option>
+            </select>
+            <label>Passedout Year :</label> <input type = "number" min = "2014" max = "2018">
+            <label>Percentage :</label> <input type = "text">% <br>
             <br>
+            <label>Institute Name :</label> <input type = "text">
+            <label>Grade :</label> <select name = "grade">
+            <option>SSLC</option>
+            <option>HSC</option>
+            </select>
+            <label>Passedout Year :</label> <input type = "number" min = "2014" max = "2018">
+            <label>Percentage :</label> <input type = "text">% <br>
+            <br>
+            <label>Institute Name :</label> <input type = "text">
             <label>Degree :</label> <select name = "deg" >
                 <option>BA</option>
                 <option>B.sc</option>
                 <option>B.com</option>
                 <option>Others</option>
             </select>             
-            <label>Passedout year :</label> <input type = "number" min = "2018" max = "2024" name = "year of passing" value = "2020" />
-            <label>Percentage :</label> <input type ="number" name ="per"/>           
+            <label>Passedout year :</label> <input type = "number" min = "2018" max = "2024"/>
+            <label>Percentage :</label> <input type ="text" name ="per"/> %       
         </div>
         <h4>Project </h4>
         <label>Project name :</label> <input type ="text"/><br>
@@ -55,8 +78,8 @@
                                 <input type = "radio" name = "gen" value = "fem">Female</input><br>
         <br>
         <label>Marital status :</label>
-            <input type = "checkbox" name = "mar">Married</input>
-            <input type = "checkbox" name = "mar">Unmarried</input><br>
+            <input type = "radio" name = "mar" value="mrd">Married</input>
+            <input type = "radio" name = "mar" value = "unmrd">Unmarried</input><br>
         <br>
         <label>Languages known :</label> <input type = "checkbox" name = "lan"> English</input>
                                         <input type = "checkbox" name = "lan"> Tamil </input>

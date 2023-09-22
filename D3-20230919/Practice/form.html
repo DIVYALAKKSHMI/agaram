@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script type = "text/javascript" src = "form.js"></script>
+        <link rel = "stylesheet" href = "form.css">
+    </head>
+    <body>
+        <div id = "home">
+            <button onclick="login()">Login</button>
+            <button onclick="register()">Register</button>
+        </div>
+        <form>
+        <div id = "txt">
+            <p id = "Weltxt">Welcome,</p>
+            <button type = "button" id = "out" onclick="homepg()">Log out</button>
+        </div>
+        <br>
+        <div id = "wrapper" >
+            <h2>Login</h2>
+            <label>Email : </label><input type = "text" placeholder="enter email" id = "email"required/><br>
+            <br>
+            <label>Password : </label><input type = "password" id = "password"/><br>
+            <br>
+            <button type = "button" onclick="logincheck()" id = "in">Login</button>
+        </div>
+        </form> 
+        <script>
+            load()
+        </script>
+        <form>
+            <div id = "reg" >
+            <h2>Registration</h2>
+            <label>Name : </label><input type = "text" id = "rname"><br>
+            <br>
+            <label>Email : </label><input type ="email" id = "rmail"><br>
+            <br>
+            <label>Password : </label><input type = "password" id = "rpass"><br>
+            <br>
+            <button onclick="reg()" type ="button">Register</button>
+            </div>
+        </form> 
+        <div id ="rlist">
+            <button type = "button" onclick="reguser()">Registered Users</button>
+            <table border = "1" id = "tabledata">
+            <thead> 
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody id ="row_list">
+
+            </tbody>
+            </table>
+        </div>
+    </body>
+</html> 

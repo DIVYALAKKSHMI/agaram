@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box{background-color: seagreen;
+             position: relative;
+             height : 200px;
+             width : 200px;
+             border-radius: 50%;
+             animation-name: circle;
+             animation-duration: 3s;
+             animation-fill-mode :forwards;
+             animation-iteration-count: 2;}
+        @keyframes 
+           circle {
+            0% {left: 0px;
+                top : 0px;} 
+            50%{background-color: lightseagreen;
+                top : 60px;
+                left : 60px;
+                width : 100px;
+                height : 100px;}
+            100%{background-color: lightseagreen;
+                 top : 400px;
+                 left : 400px;
+                 height : 350px;
+                 width : 350px;}}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
