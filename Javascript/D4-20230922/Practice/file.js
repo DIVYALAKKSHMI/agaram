@@ -1,11 +1,11 @@
-function login() {
-    // localStorage.removeItem("loggedin")
-    window.location = "login.html"
-}
+// function login() {
+//     // localStorage.removeItem("loggedin")
+//     window.location = "login.html"
+// }
 
-function register() {
-    window.location = "reg.html"
-}
+// function register() {
+//     window.location = "reg.html"
+// }
 
 function logincheck() {
     let login_email = document.getElementById("logmail").value
@@ -34,74 +34,74 @@ function logincheck() {
     console.log(Username)
 }
 
-function reg() {
-    let r_mail = document.getElementById("regmail").value;
-    let r_pass = document.getElementById("regpass").value;
-    let r_name = document.getElementById("regname").value;
+// function reg() {
+//     let r_mail = document.getElementById("regmail").value;
+//     let r_pass = document.getElementById("regpass").value;
+//     let r_name = document.getElementById("regname").value;
 
-    if (localStorage.getItem("details")) {
-        localdata = JSON.parse(localStorage.getItem("details"))
-        localdata.push({
-            email: r_mail,
-            password: r_pass,
-            name: r_name
-        })
-        localStorage.setItem("details", JSON.stringify(localdata))
-    }
-    else {
-        let localdata = []
-        localdata.push({
-            email: r_mail,
-            password: r_pass,
-            name: r_name
-        })
-        localStorage.setItem("details", JSON.stringify(localdata))
-    }
-}
+//     if (localStorage.getItem("details")) {
+//         localdata = JSON.parse(localStorage.getItem("details"))
+//         localdata.push({
+//             email: r_mail,
+//             password: r_pass,
+//             name: r_name
+//         })
+//         localStorage.setItem("details", JSON.stringify(localdata))
+//     }
+//     else {
+//         let localdata = []
+//         localdata.push({
+//             email: r_mail,
+//             password: r_pass,
+//             name: r_name
+//         })
+//         localStorage.setItem("details", JSON.stringify(localdata))
+//     }
+// }
 
-function logbck() {
-    localStorage.removeItem("loggedin")
-    window.location = "login.html"
-}
+// function logbck() {
+//     localStorage.removeItem("loggedin")
+//     window.location = "login.html"
+// }
 
-function reguser() {
-    list = JSON.parse(localStorage.getItem("details"))
-    data = ""
-    for (i = 0; i < list.length; i++) {
-        data = data + `
-          <tr>
-          <td>${list[i].name}</td>
-          <td>${list[i].email}</td>
-          <td><button type ="button">&#9998</button></td>
-          <td> <button type ="button" onclick ="delte('${list[i].email}')">&#128465</button></td>
-          </tr>`}
-    document.getElementById("reglst").innerHTML = data
-}
+// function reguser() {
+//     list = JSON.parse(localStorage.getItem("details"))
+//     data = ""
+//     for (i = 0; i < list.length; i++) {
+//         data = data + `
+//           <tr>
+//           <td>${list[i].name}</td>
+//           <td>${list[i].email}</td>
+//           <td><button type ="button">&#9998</button></td>
+//           <td> <button type ="button" onclick ="delte('${list[i].email}')">&#128465</button></td>
+//           </tr>`}
+//     document.getElementById("reglst").innerHTML = data
+// }
 
-function delte(d_email) {
-    let del = JSON.parse(localStorage.getItem("details"))
-    let newdata = []
-    for (let i = 0; i < del.length; i++) {
-        if (d_email != del[i].email) {
-            newdata.push(del[i])
-        }
-    }
-    localStorage.setItem("details", JSON.stringify(newdata))
-    reguser()
-}
+// function delte(d_email) {
+//     let del = JSON.parse(localStorage.getItem("details"))
+//     let newdata = []
+//     for (let i = 0; i < del.length; i++) {
+//         if (d_email != del[i].email) {
+//             newdata.push(del[i])
+//         }
+//     }
+//     localStorage.setItem("details", JSON.stringify(newdata))
+//     reguser()
+// }
 
-function load() {
-    if (localStorage.getItem("loggedin")) {
+// function load() {
+//     if (localStorage.getItem("loggedin")) {
 
-        user = localStorage.getItem("Username")
-        document.getElementById("weltxt").innerHTML = `
-         <h2>Welcome,
-       ${user}</h2>`
-    }
-}
+//         user = localStorage.getItem("Username")
+//         document.getElementById("weltxt").innerHTML = `
+//          <h2>Welcome,
+//        ${user}</h2>`
+//     }
+// }
 
-function secure() {
-    if (!localStorage.getItem("loggedin")) {
-        window.location = "login.html"
-    }
-} 
+// function secure() {
+//     if (!localStorage.getItem("loggedin")) {
+//         window.location = "login.html"
+//     }
+// } 
