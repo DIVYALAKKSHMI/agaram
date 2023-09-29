@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    </head>
+    <body>
+        <div id ="welpg">
+            <button type ="button" id ="outbtn" onclick="logout()">Log out</button>
+            <p id ="weltxt">
+                Welcome,
+            </p>
+        </div>
+        <div id ="regtbl">
+            <button type ="button" onclick="tableadd()">Registered users</button>
+            <table border="1">
+                <thead>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th colspan="2">Actions</th>
+                </thead>
+                <tbody id ="table_body">
+
+                </tbody>
+            </table>
+        </div>
+        <script type ="text/javascript" src ="base.js"></script>
+        <script>
+             secure()
+        </script>
+    </body>
+</html>

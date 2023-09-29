@@ -1,0 +1,38 @@
+ /* *{margin: 0;
+    padding :0; */
+*{color: whitesmoke;} 
+
+
+
+#menu{background-color: #531253;
+      width : 100%;
+      height : 60px;
+      position: sticky;
+      top: 0px;
+      z-index: 1;} 
+
+#logo{padding : 14px;
+      display: inline-block;}
+
+#logoimg{border-radius: 50%;}
+
+#frntimg{width: 100%;
+       height : 300px;}
+
+#hrzimg{position: relative;}
+#txt{position: absolute;
+       bottom : 50%;
+       right : 39%;}
+
+ul{display: inline-block;
+    vertical-align: top;
+   margin: 18px 0px 0px 750px;}
+
+
+li{display: inline;
+   padding: 8px;}
+   
+
+p{color: black;
+  width : 300px;
+  margin: 0px auto;} 
