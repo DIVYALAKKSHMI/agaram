@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <link rel ="stylesheet" href ="css/min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- <form class ="form-inline">
+        <div>
+             <textarea class ="form-control"></textarea>
+             <label>Name : </label><input type ="text" >
+             <lable>Email : </lable><input type ="email" >
+             <label>Password : </label><input type ="password">
+             <label>Text : </label><input type ="text">
+        </div>
+        </form> -->
+        <!-- <form>
+        <div class="d-flex justify-content-around">
+            <label>Name : </label>
+            <input type ="text">
+            <label>Email : </label>
+            <input type ="email">
+            <label>Password : </label>
+            <input type ="password">
+        </div>
+        </form> -->
+        <!-- <form>
+            <div class="d-flex flex-column align-self-stretch">
+            <label>Name : </label>
+            <input type ="text">
+            <label>Email : </label>
+            <input type ="email">
+            <label>Password : </label>
+            <input type ="password">
+            </div>
+        </form> -->
+        <!-- <form class ="d-flex flex-column align-items-start">
+        <div class="mb-auto p-2">
+            <label>Name : </label>
+            <input type ="text">
+        </div>
+        <div class="p-2">
+            <label>Email : </label>
+            <input type ="email">
+        </div>
+        <div class="p-2">
+            <label>Password : </label>
+            <input type ="password">
+        </div>
+        </form> -->
+
+        <form class ="bg-secondary">
+            <h2 class ="alert alert-dark text-center">RESUME BUILDER</h2>
+            <div class ="d-flex justify-content-around flex-wrap">
+                <div class ="">
+                    <label>Name : </label>
+                    <input type ="text"class ="form-control" name ="name" onkeyup="singleval(this)">
+                </div>
+                <div>
+                    <label>Email : </label>
+                    <input type ="email"class ="form-control" name ="email" onkeyup="singleval(this)">
+                </div>
+                <div>
+                    <label>Phoneno : </label>
+                    <input type ="text" class ="form-control" name ="phoneno" onkeyup="singleval(this)">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center flex-wrap mt-3">
+                <label>Objective : </label>
+                <textarea cols="50" rows="3" placeholder="Type here..." name ="objective" onkeyup="singleval(this)"></textarea>
+            </div>
+
+            <h2 class ="alert alert-dark text-center mt-2">EXPERIENCE</h2>
+            <div class ="d-flex justify-content-around flex-wrap">
+                <div>
+                    <label>Company Name : </label>
+                    <input type ="text" class ="form-control">
+                </div>
+                <div>
+                    <label>Role played : </label>
+                    <input type ="text" class ="form-control">
+                </div>
+                <div>
+                    <label>Years of experience : </label>
+                    <input type ="text" class ="form-control">
+                </div>
+            </div>
+            <div class ="d-flex justify-content-center flex-wrap mt-3">
+                <label>Job description : </label>
+                <textarea cols="50" rows="3" placeholder="Type here..."></textarea>
+            </div>
+
+            <h2 class ="alert alert-dark text-center mt-2">EDUCATION</h2>
+            <div class ="d-flex justify-content-around flex-wrap">
+                <div>
+                    <label>Institute name : </label>
+                    <input type ="text" class ="form-control">
+                </div>
+                <div>
+                    <label>Level : </label>
+                    <input type ="text" class ="form-control">
+                </div>
+                <div>
+                    <label>Passed out year : </label>
+                    <input type ="text" class ="form-control">
+                </div>
+                <div>
+                    <label>Percentage : </label>
+                    <input type ="text" class ="form-control">
+                </div>
+            </div>
+
+            <h2 class ="alert alert-dark text-center mt-2">PROJECT</h2>
+            <div class ="d-flex justify-content-around flex-wrap">
+                <div>
+                    <label>Project name : </label>
+                    <input type ="text" class ="form-control"> 
+                </div>
+                <div>
+                    <label>Project description :</label>
+                    <textarea cols="50" rows="3" placeholder="Type here.."></textarea>
+                </div>
+            </div>
+
+            <h2 class ="alert alert-dark text-center mt-2">PERSONAL DETAILS</h2>
+            <div class ="d-flex justify-content-around flex-wrap">
+                <div>
+                    <label>Name : </label>
+                    <input type ="text" class ="form-control" name ="name" onkeyup="singleval(this,'personaldetails')">
+                </div>
+                <div>
+                    <label>Date of birth : </label>
+                    <input type ="date" class ="form-control" name ="DOB" onchange="singleval(this,'personaldetails')">
+                </div>
+                <div>
+                    <label>Age : </label>
+                    <input type ="number" class ="form-control" name ="age" onchange="singleval(this,'personaldetails')">
+                </div>
+                <div>
+                    <label>Gender : </label>
+                    <input type ="text" class ="form-control" name ="gender" onkeyup="singleval(this,'personaldetails')">
+                </div>
+            </div>
+
+            <div class ="d-flex justify-content-center mt-3 flex-wrap">
+                <label>Marital status : </label>
+                <input type ="text" name ="marital status" onkeyup="singleval(this,'personaldetails')">
+            </div>
+
+            <div class ="d-flex justify-content-around flex-wrap mt-3">
+                <div>
+                    <label>Skills : </label>
+                    <input type ="text" class="form-control-inline" id="skill">
+                    <button type ="button" class ="btn btn-success m-2" onclick="multival('skills','skill','showskill')">ADD</button>
+                    <div>
+                        <badge id="showskill"></badge>
+                    </div>
+                </div> 
+                <div>
+                    <label>Languages known : </label>
+                    <input type ="text" class="form-control-inline" id="langu">
+                    <button type ="button" class ="btn btn-success m-2" onclick ="multival('languages known','langu','showlangu')">ADD</button>
+                    <div>
+                        <badge id="showlangu"></badge>
+                    </div>
+                </div>
+            </div>
+
+            <div class ="d-flex justify-content-center flex-wrap mt-3">
+                <label>Declaration : </label>
+                <textarea cols="50" rows ="3" placeholder="Type here.."></textarea>
+            </div>
+        </form>
+
+            <div class ="alert alert-danger">
+                <pre><code id ="display"></code></pre>
+            </div>
+
+    </body>
+    <script src ="practice.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html> 

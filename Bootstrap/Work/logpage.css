@@ -1,0 +1,6 @@
+body{background-image: url('../../../Downloads/pexels-pok-rie-130879.jpg');
+     background-size: 100%;}
+.container{border : 1px solid white;
+            padding : 30px 20px;
+            margin-top : 10%;
+             box-shadow: 5px 5px 10px black}

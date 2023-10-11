@@ -50,43 +50,29 @@ dataref.once('value')
 }
 
 function login(){
+  var mail = document.getElementById("logmail").value
+  var pass = document.getElementById("logpass").value
 
-    let user_detail=document.getElementById("logmail").value
-    let Password=document.getElementById("logpass").value
-        dataref.once('value')
-        .then(function(snapshot) {
-            let data = snapshot.val();
-            console.log(data);})}
-//             if(data){
-//                 var isuser = false;
-//                 for(i=0;i<data.length;i++){
+  let dbvalue = firebase.database().ref("registeredUsers")
 
-//                     if ((data[i].email==user_detail) && (data[i].password==Password))
-//                     {
-//                         alert("login successfully")
-//                         isuser = true
-//                         localStorage.setItem("loggedin",true)
-//                         localStorage.setItem("Username",data[i].name)
-//                         window.location="homepg.html";
-
-//                         document.getElementById("weltxt").innerHTML = welcome, '${data[i].Name}'
-                  
-//                         //   tableadd()
-//                         break;
-//                     }
-              
-//                     // else{
-//                     //     alert("Please Register First");                
-//                     // }
-//                 }
-
-//             if (isuser==false){
-//                 alert("Please Register First")
-//                 window.location="regpg.html"
-//             } 
-//         }
-//         })
-// }
+  dbvalue.once("value").then(function(snapshot){
+      let values = snapshot.val()
+      let user = false
+      for (i=0;i<values.length;i++){
+          if(values[i].email == mail && values[i].password == pass){
+            alert("Login Success")
+            user = true
+            localStorage.setItem("loggedin" , true)
+            localStorage.setItem("username",values[i].name)
+            window.location="homepg.html"
+          }
+          if (user == false){
+            alert("Sorry! Register first")
+            window.location="regpg.html"
+          }
+      }
+  })
+}
 
 function tableadd() {
     dataref.once("value").then(function(snapshot){

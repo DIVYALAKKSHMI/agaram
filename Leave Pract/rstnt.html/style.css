@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+*{margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+  font-size: 62.5%;}
+
+body{font-family: "Poppins",sans-serif;}
+
+a{text-decoration: none;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color:aliceblue;}
+
+h1{font-weight: 800;
+   font-size: 3.6rem;
+   margin: 1.6rem 0;}
+
+h2{font-weight: 800;
+   font-size: 2.4rem;
+   margin : 1.6rem 0;}
+
+p{font-weight: 400;
+  font-size: 1.8rem;
+  margin: 1.6rem 0;}
+
+img{width: 100%;
+    height: auto;}
+
+.row{text-align: center;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     margin: auto;
+     width: 80%;}
+
+section{padding: 100px 0;}
+
+header{height : 100vh;
+       background-image:  url('../../../Downloads/pexels-dana-tentis-750073.jpg');
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+       color: aliceblue;}
+
+#logo h1{margin: auto 0;
+         font-size: 3.2rem;
+         color:gold}
+
+nav{display: flex;
+    justify-content: space-between;
+    padding : 2% 8%;}
+
+
+nav ul{list-style-type: none;}
+
+nav ul li{display: inline-block;
+          margin: 2.5rem;}
+
+nav ul li a:hover{color: gold;
+                  transition: .3s ease-in-out;}
+
+.headercontent{position: relative;
+               top:10%;
+               left: 10%;}
+
+.left,.center,.right{padding: 10px;
+                     margin: 10px;
+                     color :aliceblue;
+                     background-color:#ffcb00cc;}
+
+#feat{text-align: center;
+      font-weight: 600;
+      letter-spacing: 5px;}
+
+.features{background-color:#e08d00;}
+
+.heading{background-color: #ee8f00f7;
+          text-align: center;
+          letter-spacing: 5px;}
+
+.fooditems{display: flex;
+           justify-content :space-between;}
+
+.food img{margin: 2px;
+         /* position: relative; */
+          width: 50%; 
+         border-radius:0px 10px 10px 0;}
+
+/* .fooddetail{padding :20px 10px;} */
+
+.food button{background-color: #9e9245;
+                   border: none;
+                   font-size: 16px;
+                   font-weight: 400;}
+
+.food i{font-weight: 600;}
+
+.menu{padding:0;}

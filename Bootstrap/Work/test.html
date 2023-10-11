@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Name : </label><input type ="text" class ="form-control" disabled>
+        <br><br>
+
+        <label>Password : </label><input type ="text" class="form-control form-control-lg" >
+        <div  class="form-text">
+            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+          </div>
+        <br><br>
+
+        <label>Read :</label>
+        <input type = "text"  class ="form-control-plaintext" value ="read" readonly> 
+        <br><br>
+
+        <input type ="file" class ="form-control">  
+        <input type ="file" class ="form-control" multiple> 
+        <br><br>
+
+        <input list="datalistopt" class ="form-control" placeholder="Type to search">
+        <datalist id ="datalistopt">
+            <option>New York</option>
+            <option>London</option>
+        </datalist>
+        <br><br>
+
+        <select class ="form-select">
+            <option selected>Select </option>
+            <option>1</option>
+            <option>2</option>
+        </select>
+        <br><br>
+
+        <div class ="row">
+            <div>
+            <!-- <label>Username</label>  -->
+            <div class="input-group">
+                <div class="input-group-text">@</div> 
+                <input type ="text" placeholder="username">
+            </div>        
+            <div class ="col-6">
+                <label>Firstname</label>
+                <input type ="text" class ="form-control" placeholder="Firstname">                
+            </div>
+            <div class ="col-6">
+                <label>Secondname</label>
+                <input type ="text" class ="form-control" placeholder="Secondname">
+            </div>
+            <div class ="col-sm-12">
+                <label>Address 1</label>
+                <input type ="text" class ="form-control" placeholder="Residential Address">
+            </div>
+            <div class ="col-12">
+                <label>Address 2</label>
+                <input type ="text" class ="form-control" placeholder="Permanent Address2">
+            </div>
+            <div class ="col-6">
+                <label>State</label>
+                <input input ="text" class="form-control" placeholder="State">
+            </div>
+            <div class ="col-4">
+                <label>District</label>
+                <input input ="text" class ="form-control" placeholder="Distrcict">
+            </div>
+            <div class ="col-2">
+                <label>Pincode</label>
+                <input type ="text" class ="form-control" placeholder="Pincode">
+            </div>
+            <div class="form-check">
+                <input type ="checkbox" class ="form-check-input">Check me out
+            </div>
+        </div>
+    </form>
+</body>
+</html> 

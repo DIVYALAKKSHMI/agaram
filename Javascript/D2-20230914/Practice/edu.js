@@ -33,7 +33,7 @@ var my_resume = {name : "P.Divyalakkshmi",
 
 
 // localStorage.setItem("name" , "agaram") 
-// // sessionStorage.setItem("place" , "ngl") 
+// sessionStorage.setItem("place" , "ngl") 
 
 
 //  var x =localStorage.getItem("name") 
@@ -41,14 +41,15 @@ var my_resume = {name : "P.Divyalakkshmi",
 
 // var y = localStorage.getItem("check")  
 
-var list = ["a", "b", "c", "d"]
- var stringlst = JSON.stringify(list)
- localStorage.setItem("alpha" , stringlst)  
-    var h = localStorage.getItem("alpha") 
-    console.log(h)
-    var clist = JSON.parse(h)
-    console.log(clist[1])    
+// var list = ["a", "b", "c", "d"]
+//  var stringlst = JSON.stringify(list)
+//  localStorage.setItem("alpha" , stringlst)  
+//     var h = localStorage.getItem("alpha") 
+//     console.log(h)
+//     var clist = JSON.parse(h)
+//     console.log(clist[1])    
 
 //  sessionStorage.setItem("f" , 2)
 // var g = sessionStorage.getItem("f") 
+    // console.log(g)
 //    console.log(typeof(g)) 
