@@ -1,4 +1,4 @@
-h2{background-color: #005d8b;;
+/* h2{background-color: #005d8b;;
     color: white;
    padding : 15px 0px;}
 .prsnldtl{text-align: center;
@@ -8,4 +8,6 @@ h2{background-color: #005d8b;;
          overflow: hidden;
          padding :0px 0px 0px 5px;}
 table{border-collapse: collapse;
-      text-align: center;}
+      text-align: center;} */
+
+#btn{display: inline;}

@@ -2,6 +2,8 @@ Details ={}
 
 temp_edu ={}
 
+temp_pro ={}
+
                 // ..........setting data
 //  function text(e){
 //     Details[e.name] = e.value
@@ -20,6 +22,8 @@ temp_edu ={}
 //     display()
 // }
 
+                // .........single value,personaldetails
+
 function text(e,p_detail){
     if(p_detail){
         if(!Details[p_detail]){ 
@@ -37,20 +41,48 @@ function text(e,p_detail){
     display()
 }
 
+                    // .....array
 
-
-function add(p_key,ele_id,element_id){
+function add(p_key,ele_id){
+    console.log(ele_id)
+    console.log(p_key)
     if(!Details[p_key]){
         Details[p_key] = []
         
     }
-    let value =document.getElementById(ele_id).value
+        if(ele_id){
+            let value =document.getElementById(ele_id).value
+            if(value==""){ 
+                alert("Enter value")
+            }
+            else{
+                Details[p_key].push(document.getElementById(ele_id).value)
+                let data=Details[p_key]
+                multi(data,p_key)
+                document.getElementById(ele_id).value = ""
+               display()    
+            }
+        }
+    else{
+        Details[p_key].push(temp_edu)
+        console.log(Details[p_key])
+
+        let value=Details[p_key]
+
+        objdetail(value,p_key)
+
+        let keys = Object.keys(temp_edu)
+       for(var i=0;i<keys.length;i++){
+       let vall = keys[i]
+            console.log(keys[i])
+       document.getElementById(vall).value =""
+       }
+        temp_edu ={}
+    //    ...if not empty then it replace with the first one and adds another one object with the same value
+        }
 
     
-        if(value==""){
-            alert("Enter value")
-        }
-        else{Details[p_key].push(document.getElementById(ele_id).value)}
+        
 
     // let data = [...Details[p_key]]
     // // console.log(data)
@@ -63,29 +95,29 @@ function add(p_key,ele_id,element_id){
     //     </button>`    
     // }
     // document.getElementById(element_id).innerHTML = items
-    document.getElementById(ele_id).value = ""
-     multi(p_key,element_id)
-    display()    
+   
 }
 
-function multi(p_key,element_id){
-    let data = [...Details[p_key]]
+function multi(data,p_key){
+    console.log(p_key)
+    // console.log(ele_id)
+    // let data = [...Details[p_key]]
     // console.log(data)
 
     let items = ""
 
     for(var i=0;i<data.length;i++){
-        items = items + `<button type="button" class="btn btn-primary close p-2" onclick ="remove('${data[i]}','${p_key}','${element_id}')" >
+        items = items + `<button type="button" class="btn btn-primary close p-2" onclick ="remove('${data[i]}','${p_key}')" >
         ${data[i]}` + " " +
         `&times;</button>`    
     }
-    document.getElementById(element_id).innerHTML = items
+    document.getElementById(p_key).innerHTML = items
     // document.getElementById(element_id).value = ""
 }
 
-function remove(del,p_key,element_id){
+function remove(del,p_key){
 
-    let list = [...Details[p_key]]
+    let list = Details[p_key]
 
     // console.log(list)
 
@@ -98,10 +130,29 @@ function remove(del,p_key,element_id){
     }
     Details[p_key]= skilllst
     display()
-    multi(p_key,element_id)
+    multi(Details[p_key],p_key)
 
 }
 
+function proadd(e){
+    temp_pro[e.name] = e.value
+    console.log(temp_pro)
+}
+
+function proj(pkey){
+
+    if(!Details[pkey]){
+        Details[pkey] =[]
+    }
+    Details[pkey].push(temp_pro)
+
+        if(temp_pro){
+            temp_pro = {...temp_pro}
+        }
+    // document.getElementById()
+    display()
+
+}
 
 
 function multiadd(e){
@@ -110,100 +161,70 @@ function multiadd(e){
     
 }
 
-function objdetail(p_key,id){
+
+function objdetail(data,p_key){
+    // console.log(p_key)
+    //  console.log(id)
+    // if(!Details[p_key]){
+    //     Details[p_key] =[]
+    // }
+    // else{
+        
+    // let data =  Details[p_key]
+    
+    //     // if(temp_edu){
+    //     //  temp_edu = {...temp_edu}
+    //     // }
 
 
-    if(!Details[p_key]){
-        Details[p_key] =[]
-    }
-    Details[p_key].push(temp_edu)
-          
-        if(temp_edu){
-         temp_edu = {...temp_edu}
-        }
-
-
-    let data = Details[p_key]
-    console.log(data)
+    // // let data = Details[p_key]
+    // // console.log(data)
 
         let disdata = ""
 
     for(var i=0;i<data.length;i++){
         console.log(data[i].instnme)
 
+        let str =""
+
         for(let key in data[i]){
-            console.log([data[i][key]])
-            disdata = disdata + `
-            <tr>
+            console.log(key)
+            console.log(data[i][key])
+            // console.log([data[i][key]])  ...[convent]
+            str = str + `
+            
             <td> ${data[i][key]} </td>
-            <td> <button type ="button" class ="btn btn-warning" onclick ="removemulti('${[data[i][key]]}','${p_key}')">Delete</button> </td>
-            </tr>
+            
             `
         }
+        disdata = disdata + `<tr>` + str + ` <td> <button type ="button" class ="btn btn-warning" onclick ="deledu('${i}','${p_key}')">  Remove </button> </td>` + `</tr>`
+        console.log(i)
     }
-    document.getElementById("edushow").innerHTML = disdata
-
-
-    display()
-    
-    
-    //     let key = Object.keys(temp_edu)
-
-    //     let val = Object.values(temp_edu)
-    //     //  console.log(val)
-
-    //     // console.log(key)    
-
-    //     let show ="" 
-
-    //     for(var i =0;i<key.length;i++){
-    //         let each = key[i]
-    //         document.getElementById(each).value =""
-    //         show = show 
-    //     }   
-    //         for(var i=0;i<val.length ;i++){
-    //           show = show + `<button type ="button" onclick="removemulti('${val[i]}')">${val[i]}</button>`
-    //         }
-    //     document.getElementById(id).innerHTML=show
-    //     display()
-    }
-
-function removemulti(eduval,idnme){
-    let p_key = Details[idnme]
-    console.log(p_key)
-    let val = Object.values(temp_edu)
-    console.log(val)
-    let list =[]
-    for(var i=0;i<val.length;i++){
-        if(eduval!=val[i]){
-            list.push(val[i])
-            console.log(list)
-        }
-        // list.push(temp_edu)
-    }
-    
-    // console.log(temp_edu)
-    // objdetail(p_key,idnme)
+    document.getElementById(p_key).innerHTML = disdata
     display()
 }
+ 
 
-    
-// let show = ""
-//     for(var i =0;i<temp_edu.length;i++){
-//             console.log(temp_edu[i])
-//             show = show + `<tr> 
-//             <td> ${temp_edu[i].insname}</td>
-//             <td> ${temp_edu[i].level}</td>
-//             <td> ${temp_edu[i].psyr}</td>
-//             <td> ${temp_edu[i].percentage}</td>
-//             <td><button>Remove &times;</button></td>
-//             </tr>`
-//             document.getElementById(id).innerHTML = show
+ 
+
+function deledu(data,p_key){
+    let edu = Details[p_key]
+    let array =[]
+    for(var i=0;i<edu.length;i++){
+        console.log(i)
+        if(i!=data){
+           array.push(edu[i])
+           console.log(edu[i])
+        }
         
-//         console.log(temp_edu)       
-//     }    
-// }
-    
+
+
+    }
+    Details[p_key] = array
+    console.log(array)
+    objdetail(Details[p_key],p_key)
+
+}
 
 function display(){
 document.getElementById("display_data").innerHTML = JSON.stringify(Details, undefined ,2)
@@ -231,11 +252,11 @@ function post(){
 }
 
 function list(){
-     window.location = "data.html"
-    
+     window.location="data.html"
 }
 
 function dis(){
+
     $.ajax({
         type : "get",
         url : "http://agaram.academy/api/action.php",
@@ -375,6 +396,8 @@ function getid(d){
             let val = JSON.parse(succ)
             let valdata = JSON.parse(val.data.data)
             let pers = valdata.personaldetails
+            let proje = valdata.project
+            console.log(proje)
             // let project = valdata.project
             // console.log(project.proname)
 
@@ -425,11 +448,13 @@ function getid(d){
              $("#obj").html(valdata.objective)
              $("#marstatus").html(pers.maritalstate)
              $("#address").html(valdata.addre)
+             $("#nation").html(pers.nationality)
+             $("#title").html(valdata.title)
 
              let edu =""
             for(var i=0;i<educat.length;i++){
                 edu = edu + `
-                <tr>
+                <tr >
                 <td> ${educat[i].instnme} </td>
                 <td> ${educat[i].level} </td>
                 <td> ${educat[i].year} </td>
@@ -438,6 +463,17 @@ function getid(d){
                 `
                 $("#educate").html(edu)
             }  
+
+            let pr = ""
+             for(var i=0;i<proje.length;i++){
+                pr = pr + `
+                <tr>
+                <td> ${proje[i].proname} </td>
+                <td> ${proje[i].prodesc} </td>
+                </tr>
+                `
+                $("#prooject").html(pr)
+             }
         },
         error : function(err){
             console.log(err)
@@ -445,3 +481,15 @@ function getid(d){
     })
 }
 
+function generatePDF(){
+    // alert(1)
+    const page = document.getElementById('resum');
+    var opt = {
+        margin : 1,
+        filename : 'Demopdf.pdf',
+        image : {type : 'jpeg',quality : 0.98},
+        html2canvas : {scale : 2},
+        jsPDF : {unit : 'in',format : 'letter',orientation : 'portrait'}
+    };
+    html2pdf().set(opt).from(page).save();
+}

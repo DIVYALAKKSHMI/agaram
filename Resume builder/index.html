@@ -28,6 +28,10 @@
                 </div>
 
                 <div class ="d-flex justify-content-center flex-wrap mt-3">
+                    <div>
+                        <label>Title :</label>
+                        <input type="text" class ="form-control" name ="title" onkeyup="text(this)">
+                    </div>
                     <label>Objective : </label>
                     <textarea cols="50" row ="3" placeholder="Type here..." name ="objective" onkeyup="text(this)" ></textarea>
                 </div>
@@ -56,17 +60,20 @@
                     </div>
                 </div> -->
 
-                <!-- <h2 class ="alert alert-dark text-center mt-2">PROJECT</h2>
-                <div class ="d-flex justify-content-around flex-wrap">
+                 <h2 class ="alert alert-dark text-center mt-2">PROJECT</h2>
+                 <div class ="d-flex justify-content-around flex-wrap">
                     <div>
                         <label>Project name :</label>
-                        <input type ="text" class ="form-control" name ="proname" onkeyup="text(this,'project')">
+                        <input type ="text" class ="form-control" name ="proname" onkeyup="proadd(this)">
                     </div>
                     <div>
                         <label>Project description :</label>
-                        <input type ="text" class ="form-control" name ="prodesc" onkeyup="text(this,'project')">
+                        <input type ="text" class ="form-control" name ="prodesc" onkeyup="proadd(this)">
                     </div>
-                </div> -->
+                    <div>
+                        <button type="button" onclick="proj('project')" class ="btn btn-success">ADD</button>
+                    </div>
+                </div> 
 
                 <h2 class ="alert alert-dark text-center mt-2">PERSONAL DETAILS</h2>
                 <div class ="d-flex justify-content-around flex-wrap">
@@ -94,24 +101,30 @@
                         <label>Marital status :</label>
                         <input type ="text" name ="maritalstate" class ="form-control" onkeyup="text(this,'personaldetails')">
                     </div>
+                    <div>
+                        <label>Nationality :</label>
+                        <input type="text" name="nationality" class ="form-control" onkeyup="text(this,'personaldetails')">
+                    </div>
                 </div>  
                     
                     <div class ="d-flex justify-content-around flex-wrap">
                         <div>
                             <label class ="m-2">Skills :</label>
                             <input type ="text" id="skill" class ="form-control">
-                            <button type ="button" class ="btn btn-success m-2" onclick="add('skills','skill','dsp')"> ADD </button>
-                        <div id ="dspyitem">
-                            <badge id ="dsp"></badge>
-                        </div>
+                            <button type ="button" class ="btn btn-success m-2" onclick="add('skills','skill')"> ADD </button>
+                            <div>
+                                <badge id ="skills"></badge>
+                            </div>
                         </div>
                         <div>
                         <div>
                             <label class ="m-2">Languages known :</label>
                             <input type ="text" id ="langu" class ="form-control">
-                            <button type ="button" class ="btn btn-success m-2" onclick="add('languages_known','langu','show')">ADD</button>
+                            <button type ="button" class ="btn btn-success m-2" onclick="add('languages_known','langu')">ADD</button>
                         </div>
-                        <div><badge id="show"></badge></div>
+                        <div>
+                            <badge id="languages_known"></badge>
+                        </div>
                         </div>
                     </div>
 
@@ -130,17 +143,20 @@
                             <input type ="text" id ="per" name ="per" placeholder="Percentage" onkeyup="multiadd(this)">
                         </div>
                         <div>
-                            <button type ="button" class ="btn btn-success" onclick="objdetail('education','edushow')">ADD</button>
+                            <button type ="button" class ="btn btn-success" onclick="add('education')">ADD</button>
                         </div>
                         <div>
-                            <table class ="alert alert-warning">
+                            <table class ="table table-celled">
                                 <thead>
                                     <tr>
-                                        <th>Value</th>
+                                        <th>Insname</th>
+                                        <th>level</th>
+                                        <th>year</th>
+                                        <th>percent</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody id="edushow">
+                                <tbody id="education">
 
                                 </tbody>
                             </table>
@@ -151,21 +167,22 @@
                         <textarea cols="50" rows="3" placeholder="Type here..." name ="declaration" onkeyup="text(this)"></textarea>
                     </div>
                      
-                <div>
-                    <button type ="button" class ="btn btn-success" onclick="post()">Submit</button>
+                <div id="btn">
+                    <button type ="button" class ="btn btn-info mx-2 my-2" onclick="post()">Submit</button>
+                </div>
+                <div id="btn">
+                    <button type ="button" class ="btn btn-info mx-2 my-2" onclick="get()">Get my resume</button>
+                </div>
+                <div id="btn">
+                    <button type ="button" class ="btn btn-info mx-2 my-2" onclick="dele()">Delete</button>
+                </div>
+                <div id="btn">
+                    <button type ="button" class ="btn btn-info mx-2 my-2" onclick="resbyid()">Get by Id</button>
                 </div>
                 <div>
-                    <button type ="button" class="btn btn-warning mt-2" onclick ="list()">Data</button>
+                    <button type ="button" class="btn btn-warning mx-2 my-2" onclick="list()">Data</button>
                 </div>
-                <div>
-                    <button type ="button" class ="btn btn-success mt-2" onclick="get()">Get my resume</button>
-                </div>
-                <div>
-                    <button type ="button" class ="btn btn-success mt-2" onclick="dele()">Delete</button>
-                </div>
-                <div>
-                    <button type ="button" class ="btn btn-success mt-2" onclick="resbyid()">Get by Id</button>
-                </div>
+                
                 <!-- <div>
                     <button type ="button" class ="btn btn-warning" onclick ="subresume()">Submit resume</button>
                 </div> -->
