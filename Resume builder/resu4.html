@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="resu4.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="resum">
+        <div id="slide" class="container"></div>
+
+        <div id="content">
+        <div id="header" class="container">
+            <h3 id="name">Divyalakkshmi.P</h3>
+            <h4 id="title">Fullstack developer</h4>
+        </div >
+
+        <div id="section">
+            <div id="left">
+                <div id="con">
+                    <!-- <i class="material-icons"> &#xe0ba; </i>  -->
+                    <h3>CONTACT</h3>
+                    <i class="material-icons"> &#xe0cd; </i> <i id="phoneno">75988 33659</i> <br>
+                    <br>
+                    <i class="material-icons"> &#xe0be; </i> <i id="email">divyalakkshmi2003@gmail.com</i> <br>
+                    <br>
+                    <i class="material-icons"> &#xe0c8; </i> <i id="address">36/18-A,East Street,Vadalivillai,Kottar.</i>
+                </div>
+
+                <div id="tbl">
+                    <h3>EDUCATION</h3>
+                    <table border="1" class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>Institute Name</th>
+                                <th>Level</th>
+                                <th>Percentage</th>
+                                <th>Passedout year</th>
+                            </tr>
+                        </thead>
+                        <tbody id="educate">
+                            <tr>
+                                <td>St.joseph convent</td>
+                                <td>HSC</td>
+                                <td>80</td>
+                                <td>2020</td>
+                            </tr>
+                            <tr>
+                                <td>SNG</td>
+                                <td>SSLC</td>
+                                <td>90</td>
+                                <td>2018</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="skl">
+                    <h3>SKILLS</h3>
+                    <ul id="skill">
+                        <li>Python</li>
+                        <li>HTML,CSS</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div id="right">
+                <div id="object">
+                    <h3>OBJECTIVE</h3>
+                    <p id="obj">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Necessitatibus mollitia, minus distinctio autem vero saepe porro in incidunt eaque id.</p>
+                </div>
+
+                <div id="tbl1">
+                    <h3>PROJECT</h3>
+                    <table border="1" class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>Project_name</th>
+                                <th>Project_description</th>
+                            </tr>
+                        </thead>
+                        <tbody id="prooject">
+                            <tr>
+                                <td>web application</td>
+                                <td>tools used : HTML,CSS and JS</td>
+                            </tr>
+                            <tr>
+                                <td>food website</td>
+                                <td>tools used : HTML,CSS and JS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="la">
+                    <h3>LANGUAGES_KNOWN</h3>
+                    <ul id="langu">
+                        <li>english</li>
+                        <li>hindi</li>
+                    </ul>
+                </div>
+
+                <div id="decl">
+                    <h3>DECLARATION </h3>
+                    <p id="declare">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Facilis, exercitationem.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> A odio ab est vitae? Ad, quod.
+                    </p>
+                </div>
+
+            </div>
+        </div>       
+    </div>
+            <div class="container" id="slide"></div>
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-dark btn-lg mx-2 my-2" onclick ="generatePDF()">Get as PDF</button>
+    </div>
+
+    </body>
+    <script src="../Resume builder/javascript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- <script src ="javascript/main.js"></script> -->
+    <script>
+        var id = getUrlParameter('id');
+        alert(id)
+    </script>
+    <script>
+        getid(id)
+    </script>
+                                    <!-- ....pdf download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</html>

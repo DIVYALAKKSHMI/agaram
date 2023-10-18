@@ -1,0 +1,13 @@
+#lftdiv{background-color: black;
+        display: inline-block;
+        color: white;}
+h5,h6{display: inline;}
+#rghtdiv{display: inline-block;
+         width : 900px;
+         vertical-align: top;}
+#header{color: white;
+        background-color: black;}
+
+#rytrytsection{background-color: black;}
+
+#sk, #la,#title, #fname , #dob , #age, #gender, #marstatus , #edu , #pro, #nation,#email, #phoneno , #address, #object, #decl , th{color : rgb(91, 174, 247);}

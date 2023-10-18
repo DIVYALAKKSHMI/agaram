@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="resu2.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="resum">
+            <div id="lftdiv">
+                <div class ="mx-5">
+                    <img src="../../Downloads/div.jpg" width ="250px" height ="250px">
+                </div>
+                <div class ="container text-end">
+                    <h2  class="mx-1">PERSONAL INFO</h2>
+                    <label>Father's name :</label><h5 id="fname" >T.Parama Chandran</h5><br>
+                    <br>
+                    <label>DOB :</label><h5 id ="dob">06-06-2003</h5><br>
+                    <br>
+                    <label>Age :</label><h5 id="age" >20</h5><br>
+                    <br>
+                    <label>Gender :</label><h5 id="gender">Female</h5><br>
+                    <br>
+                    <label>Marital status :</label><h5 id="marstatus" >Unmarried</h5><br>
+                    <br>
+                    <label>Nationality :</label><h5 id="nation" >Indian</h5><br>
+                    <br>
+                    <h2 class="mx-1">CONTACT</h2>
+                    <label>Email :</label><h6 id="email" >divyalakkshmi2003@gmail.com</h6><br>
+                    <br>
+                    <label>Phoneno :</label><h6 id="phoneno" >75988 33659</h6><br>
+                    <br>
+                    <label>Address :</label><h6 id="address" >36/18-A,East street,Vadalivillai,kottar.</h6>
+                </div>
+            </div>
+            <div id="rghtdiv">
+                <div  id="header" class =" mx-2">
+                    <h3 id="name" class="mx-2">Divyalakkshmi.P</h3>
+                    <h4 id="title" class="text-primary mx-2">Fullstack developer</h4>
+                </div>
+                <div id="rytrytsection" class="mx-2 text-white px-2 py-1">
+                    <h4 id="object">Objective :</h4><p id="obj">To Succeed in an environment of growth and excellence and earn a Job
+                        which provides me job satisfaction.</p>
+                    <h4 id="edu">Education :</h4>
+                    <table class ="table table-striped table-dark text-center">
+                        <thead>
+                            <tr>
+                                <th class="text-primary">Institute Name</th>
+                                <th class="text-primary">Level</th>
+                                <th class="text-primary">Percentage</th>
+                                <th class="text-primary">Passedout year</th>
+                            </tr>
+                        </thead>
+                        <tbody id="educate">
+                            <tr>
+                                <td>St.Joseph convent</td>
+                                <td>HSC</td>
+                                <td>80</td>
+                                <td>2020</td>
+                            </tr>
+                            <tr>
+                                <td>SNG</td>
+                                <td>SSLC</td>
+                                <td>90</td>
+                                <td>2018</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    <h4 id="pro">Project :</h4>
+                        <table class ="table table-striped table-dark text-center">
+                            <thead>
+                                <tr>
+                                    <th class="text-primary">Project_name</th>
+                                    <th class="text-primary">Project_description</th>
+                                </tr>
+                            </thead>
+                            <tbody id="prooject">
+                                <tr>
+                                    <td>Food Website</td>
+                                    <td>Tools used : HTML,CSS and JS</td>
+                                </tr>
+                                <tr>
+                                    <td>Resume builder</td>
+                                    <td>Tools used : HTML,CSS and JS</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    
+                    <h4 id="sk">Skills :</h4>
+                        <ul id="skill">
+                            <li>Python</li>
+                            <li>Javascript</li>
+                        </ul>
+                    <h4 id="la">Languages known :</h4>
+                        <ul id="langu">
+                            <li>English</li>
+                            <li>Telugu</li>
+                        </ul>
+                    
+
+                    <h4 id="decl">Declaration :</h4>
+                        <p id="declare">I hereby declare the information given above is true to all my knowledge</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button type ="button" onclick ="generatePDF()" class ="btn btn-dark btn-lg m-2">Get as PDF</button>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src ="javascript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        var id = getUrlParameter('id');
+        alert(id)
+    </script>
+    <script>
+        getid(id)
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</html>

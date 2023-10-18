@@ -1,0 +1,56 @@
+#topleft{color: white;}
+#topleft h4{color: #eee62fc9;}
+#top{position: relative;
+     padding : 14px;
+     font-family: Poppins,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: #3c3f43;}
+
+#topryt{ padding : 30px;
+        position: absolute;
+        bottom : 2%;
+        left : 74%}
+
+#line{background-color :#eee62fc9;
+       padding : 10px;}
+
+b{color: #eee62fc9;}
+
+#section{display: flex;
+         justify-content: space-around;}
+
+#leftsection, #rytsection{ color: white;
+        }
+
+th{color: white;}
+
+h3,h4{
+      letter-spacing: 2px;}
+
+.objective , #section, #section2, .declaration{background-color:#3c3f43;}
+                                    /* color: white;}  */
+
+.objective ,.declaration , #section2{padding: 10px;
+                         color: white;}
+
+button{background-color : #eafd36; 
+       padding : 10px;
+        margin : 3px;}
+
+#white{color : white}
+
+/* .declaration{background-color: #eafd36; } */
+
+#section2{text-align: center;}
+
+table{border-collapse: collapse;
+      border-color:#eafd36;}
+
+th{color :white;}
+
+td{color :white;}
+
+/* li{color: #eafd36;} */
+
+ #ans, #sk , #la{color: #eafd36;}
+
+#fname , #dob , #age , #gender , #marstatus , #nation, #per{color:#eafd36;}
