@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Sub from './subheader'
 import Header from './comp';
 
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 import State from './Prop2';
 
@@ -22,7 +22,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-function App() {
+function App() { 
 
   let [isLogged,setIsLogged] = useState({
     loggin : false,
@@ -48,6 +48,9 @@ function App() {
       element : <User isLogged={isLogged} setIsLogged={setIsLogged}/>
     }
   ])
+
+  
+
   // let [name,change]=useState("Javascript")
   
   // let [num,changenum] = useState(0)

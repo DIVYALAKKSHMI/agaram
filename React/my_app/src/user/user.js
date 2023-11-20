@@ -4,40 +4,48 @@ import { Getuser } from "./user2";
 
 import { Navbar } from "../headnav";
 
+import { useEffect } from "react";
 
 import axios from "axios";
 
 function User(){
 
-    let [list,setitem] = useState(["divya","abisha","shali"])
+    // let [list,setitem] = useState(["divya","abisha","shali"])
 
-    const dele = (v)=>{
-        alert(v)
-        let val = list.filter((l)=> v!=l)
-        setitem(val)// function del(dos){
-            //     let values = dos
-            //     console.log(values)
-            //     // for(var i=0;i<values.length;i++){
-                
-            //     // }
-            // }
-            
-            // export default del;
-    }
+    // const dele = (v)=>{
+    //     alert(v)
+    //     let val = list.filter((l)=> v!=l)     
+    //     setitem(val)
+    // }
 
-    const toGetData = ()=> {
-        axios({
-            method: 'get',
-            url: 'https://jsonplaceholder.typicode.com/posts',
+    // const toGetData = ()=> {
+    //     axios({
+    //         method: 'get',
+    //         url: 'https://jsonplaceholder.typicode.com/posts',
             
-          }).then(function (response){
-            console.log("response",response.data)
-          });
-    }
+    //       }).then(function (response){
+    //         console.log("response",response.data)
+    //       });
+    // }
+
+    // useEffect(()=>{
+    //     // alert(1)
+    //     // toGetData()
+    //     console.log(list)
+    // },[list])
+
+    let [timer,setTimer] = useState(0)
+    let [timerStart,isTimerStart] = useState(true)
+
+    useEffect(()=>{
+        if(timerStart){
+            setTimer(timer+1)
+        }
+    },[timer,timerStart])
 
     return(
         <div>
-            <Navbar />
+            {/* <Navbar />
             <br></br>
 
             <h2>USER LIST</h2>
@@ -49,7 +57,7 @@ function User(){
                     <th>Item</th>
                     <th>Action</th>
                 </tr>
-                {
+                {                                                        ...user list
                     list.map((t,i) => (
                         <tr>
                             <td>{i+1}</td>
@@ -61,7 +69,21 @@ function User(){
             </table>
             <Getuser values={list} function={setitem} />
             <br></br>
-            <Button type="button" onClick={()=>toGetData()}>Get data</Button>
+            <Button type="button" onClick={()=>toGetData()}>Get data</Button> */}
+
+
+            <p>TIMER</p>
+            <b style={{fontSize:'26px'}}>{timer}</b>  
+            <br></br>
+        
+            <br></br>
+            <Button 
+            variant="primary" onClick={()=>isTimerStart(!timerStart)}>
+            {timerStart?'Stop' : 'Start'}
+            </Button>  { `  `}
+
+            <Button variant="primary" onClick={async ()=> { await isTimerStart(false) ; setTimer(0)}}>Reset</Button>
+
         </div>
     )
 }

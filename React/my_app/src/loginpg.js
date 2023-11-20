@@ -4,6 +4,9 @@ import Form from 'react-bootstrap/Form';
 import { Weltext } from "./log2";
 
 import { Link,useNavigate } from "react-router-dom";
+import axios from "axios";
+
+import { useEffect } from "react";
 
 function Log(props){
 
@@ -17,6 +20,8 @@ function Log(props){
     })
 
     const navigate = useNavigate();
+
+   
     
     const Logincheck = () => {
         // alert(1)
@@ -26,7 +31,7 @@ function Log(props){
                 loggin : true,
                 email : loginData.email
             })
-            navigate('/todo')
+            navigate('/todo')                                   
         }
         else{
             // alert("failed")
@@ -36,6 +41,25 @@ function Log(props){
             })
         }
     }
+
+    // const Logincheck = ()=> {
+    //     axios({
+    //         method : 'post',
+    //         url : 'http://agaram.academy/api/action.php',
+    //         data : {
+    //             request : 'candidate_login',
+    //             email : loginData.email,
+    //             password : loginData.password
+    //         }
+    //     }).then(function(success){
+    //         console.log("success :",success)
+    //         // props.setIsLogged({
+    //         //                 loggin : false,
+    //         //                 email : loginData.email
+    //         //             })
+    //         //             navigate('/user') 
+    //     })
+    // }
 
     return(
      

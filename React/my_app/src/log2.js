@@ -4,4 +4,4 @@ export function Weltext(name){
             <h2>welcome,{name} </h2>
         </>
     )
-}
+} 

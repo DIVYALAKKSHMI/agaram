@@ -19,7 +19,7 @@ function Todo(props){
         alert(v)
        let updatedtodo = todos.filter((t)=>t!=v)
         setarrayvalue(updatedtodo)
-    }
+    } 
 
     
 
