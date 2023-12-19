@@ -1,6 +1,8 @@
 # result = []
 
-# a = [1,0,2,3,0,4,0,5,0]
+a = [1,0,2,3,0,4,0,5,0]
+print(a.count(1))
+
 
 # for i in a:  
 #     if len(result) < len(a) :
@@ -28,6 +30,6 @@
 # print(result_dict)
 
 
-nums_list = [2,5,8,1,9,3,7]
+# nums_list = [2,5,8,1,9,3,7]
 
     

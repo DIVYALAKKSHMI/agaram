@@ -42,3 +42,4 @@ for mart in trends_mart:
          mart.update({"availability" })
 
 print(trends_mart)
+    total = 0

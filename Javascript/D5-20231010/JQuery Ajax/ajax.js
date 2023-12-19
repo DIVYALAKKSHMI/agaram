@@ -60,5 +60,19 @@ function comment(id){
 // url:`https://jsonplaceholder.typicode.com/posts/${id}/comments`,
 
 function post(){
-    
+    $.ajax({
+        type : 'post',
+        url : 'https://jsonplaceholder.typicode.com/posts',
+        data : {
+            userId : 20,
+            title : "agaram",
+            body : "Welcome to agaram software academy"
+        },
+        success : function(succ){
+            console.log(succ)
+        },
+        error : function(err){
+            console.log(err)
+        }
+    })
 }

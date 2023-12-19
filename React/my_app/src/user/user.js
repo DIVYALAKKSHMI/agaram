@@ -34,14 +34,53 @@ function User(){
     //     console.log(list)
     // },[list])
 
-    let [timer,setTimer] = useState(0)
-    let [timerStart,isTimerStart] = useState(true)
 
-    useEffect(()=>{
-        if(timerStart){
-            setTimer(timer+1)
-        }
-    },[timer,timerStart])
+    let loginCheck = () => {
+        axios({
+            method : 'post',
+            url : 'https://346ecf18-5094-4743-aa32-8c7c55e73246.mock.pstmn.io/newUsers',
+            Data : {
+                request : "Add New Users",
+                name : "divya",
+                email : "div@gmail.com"
+            }
+        }).then(function(response){
+            console.log(response)
+        })
+    }
+
+    let getEmployee = () => {
+        axios({
+            method : 'get',
+            url : 'https://346ecf18-5094-4743-aa32-8c7c55e73246.mock.pstmn.io/GetEmployees',
+            Data : {
+                request : "Get_All_Employee"
+            }
+        }).then(function(response){
+            console.log(response)
+        })
+    }
+
+    let getClient = () => {
+        axios({
+            method : 'get',
+            url : 'https://346ecf18-5094-4743-aa32-8c7c55e73246.mock.pstmn.io/Users',
+            Data : {
+                request : "Get All Users"
+            }
+        }).then(function(response){
+            console.log(response)
+        })
+    }
+
+    // let [timer,setTimer] = useState(0)
+    // let [timerStart,isTimerStart] = useState(true)
+                                                           
+    // useEffect(()=>{
+    //     if(timerStart){                           
+    //         setTimer(timer+1)                ...timer
+    //     }
+    // },[timer,timerStart])
 
     return(
         <div>
@@ -72,17 +111,22 @@ function User(){
             <Button type="button" onClick={()=>toGetData()}>Get data</Button> */}
 
 
-            <p>TIMER</p>
+            {/* <p>TIMER</p>
             <b style={{fontSize:'26px'}}>{timer}</b>  
             <br></br>
         
             <br></br>
             <Button 
-            variant="primary" onClick={()=>isTimerStart(!timerStart)}>
+            variant="primary" onClick={()=>isTimerStart(!timerStart)}>                ...timer
             {timerStart?'Stop' : 'Start'}
             </Button>  { `  `}
 
-            <Button variant="primary" onClick={async ()=> { await isTimerStart(false) ; setTimer(0)}}>Reset</Button>
+            <Button variant="primary" onClick={async ()=> { await isTimerStart(false) ; setTimer(0)}}>Reset</Button> */}
+
+
+            <Button variant="warning" onClick={()=>loginCheck()}>POST</Button>
+            <Button variant="primary" onClick={()=>getEmployee()}>GET employees</Button>
+            <Button variant="primary" onClick={()=>getClient()}>GET clients</Button>
 
         </div>
     )

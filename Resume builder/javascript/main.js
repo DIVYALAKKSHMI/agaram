@@ -277,7 +277,7 @@ function dis(){
                 <td> ${va.data[i].id} </td>
                 <td> ${va.data[i].user} </td>
                 <td> <button type ="button" class ="btn btn-info" onclick ="tdel('${va.data[i].id}')"> Delete </button> </td>
-                <td> <a href ="manage.html?id=${va.data[i].id}">Link1</a> </td>
+                <td> <a href ="manage.html?id=${va.data[i].id}">link1</a> </td>
                 <td> <a href ="resu2.html?id=${va.data[i].id}">Link2</a> </td>
                 <td> <a href ="resu3.html?id=${va.data[i].id}">Link3</a> </td>
                 <td> <a href ="resu4.html?id=${va.data[i].id}">Link4</a> </td>
@@ -292,6 +292,8 @@ function dis(){
         }
     })
 }
+
+
 
 function tdel(id){
     $.ajax({
