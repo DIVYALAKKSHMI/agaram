@@ -63,12 +63,18 @@
 //      console.log(i , a[i])
 //  }
 
- let b = [{name : "rani", 
-           place : "ngl",
-           phone : 123},
-           {name : "devi",
-            place : "kovilpati",
-            phone : 345} ]
- for (var i = 0; i<b.length; i++){
-     console.log(b[i].name) 
- } 
+//  let b = [{name : "rani", 
+//            place : "ngl",
+//            phone : 123},
+//            {name : "devi",
+//             place : "kovilpati",
+//             phone : 345} ]
+//  for (var i = 0; i<b.length; i++){
+//      console.log(b[i].name) 
+//  } 
+
+
+"use strict";
+a = 52;
+console.log(a)
+var a ;

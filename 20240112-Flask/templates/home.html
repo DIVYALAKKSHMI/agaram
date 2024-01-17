@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <h2>come {{name}} let's learn flask</h2> -->
+        {% if name == "divya" %}
+            <h1>Welcome</h1>
+        {% else %}
+            <h1>Login first</h1>
+        {% endif %}
+        
+
+        
+        {% for names in namelist %}
+        <ul>
+            <li><a href="/home/{{names}}"> {{names}} </a></li>
+        </ul>
+        {% endfor %}
+        
+
+        <!-- <ul>
+            <li>
+                <a href="https://twitter.com/?lang=en">twitter</a>
+            </li>
+        </ul> -->
+
+    </body>
+</html>

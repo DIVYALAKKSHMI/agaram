@@ -3,8 +3,17 @@ import Todo from "./Todo";
 import User from "./user/user";
 import { Nav } from "react-bootstrap";
 
+import moment from "moment";
+
+import { useEffect, useState } from "react";
 
 export function Navbar(){
+
+    
+    const formatteddate = moment().format("MMMM Do YYYY,LTS")
+    console.log(formatteddate)
+
+   
     return(
         <nav className="flex"> 
             <ul>
@@ -18,6 +27,8 @@ export function Navbar(){
                 <Link to={`/user`}> User list </Link>
                 </li>
             </ul>  
+            {formatteddate}
         </nav>
+        
     )
 }  
