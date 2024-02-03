@@ -256,15 +256,27 @@
 # print(small)
 
 
-def fun():
-    a = 3
-    b= 1
-    c = 2
-    b = b^a^c *2
-    if(b and c):
-        b=1
-        if(a) :
-            a = a*a%5
-            c = 0
-    print(a+b+c)
-fun()
+
+import datetime
+
+c = datetime.datetime.now()
+print(c)
+
+c_hour = c.hour
+print(c_hour)
+
+
+if c_hour <= 4 and c_hour > 12 :
+    print("Good morning")
+
+elif c_hour >= 12 and c_hour <= 16 :
+    print("Good afternoon")
+
+elif c_hour >= 17 and c_hour <= 19 :
+    print("Good evening")
+
+elif c_hour == 20 or c_hour == 21 :
+    print("It's already night")
+
+else :
+    print("Good night") 

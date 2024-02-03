@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Home page</h2>
+        {% if username %}
+            <p> Hello, {{username}}! you are already logged in. </p>
+            <a href="/logout">Logout</a>
+        {% else %}
+            <p> You are not logged in. Please <a href="/login">login</a> to access the home page. </p>
+        {% endif %}
+    </body>
+</html>
