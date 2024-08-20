@@ -8,6 +8,6 @@ function Changeprop(prop){
     <Button variant="success" onClick={prop.words}>check it out</Button>
     </div>
     )
-}
+} 
 
 export default Changeprop; 

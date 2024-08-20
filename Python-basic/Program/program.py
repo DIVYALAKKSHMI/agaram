@@ -1,8 +1,21 @@
+num = int(input("Enter num : "))
 
-# sentence = input("Enter_sentence : ") 
-# def longestword(sente) :
-#     longest = max(sente.split(),key = len)    
-#     print("the longest word is : " , longest)
+flag = False
 
-# longestword(sentence) 
+if num <= 1:
+    print(num, "is not a prime number")
+elif num > 1:
+    # check for factors
+    for i in range(2, num):
+        print(i)
+        if (num % i) == 0:
+            # if factor is found, set flag to True
+            flag = True
+            # break out of loop
+            break
 
+    # check if flag is True
+    if flag:
+        print(num, "is not a prime number")
+    else:
+        print(num, "is a prime number")

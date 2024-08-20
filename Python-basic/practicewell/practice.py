@@ -63,14 +63,16 @@
 # print(fruit_name(a))
 
 
-# n = int(input("Enter_num : "))
+# print(),parameter,end=""
 
-# for i in range(1,n+1) :                                         print(),parameter,end=""
-#     print(i,end="")
+n = int(input("Enter_num : "))
+
+for i in range(1,n+1) :                                         
+    print(i,end=" ")
 
 
-    # print("hello,",end="")
-    # print("world")
+    print("hello,",end=" ")
+    print("world")
 
 
 # a = [2,3,6,6,5]
@@ -257,26 +259,26 @@
 
 
 
-import datetime
+# import datetime
 
-c = datetime.datetime.now()
-print(c)
+# c = datetime.datetime.now()
+# print(c)
 
-c_hour = c.hour
-print(c_hour)
+# c_hour = c.hour
+# print(c_hour)
 
 
-if c_hour <= 4 and c_hour > 12 :
-    print("Good morning")
+# if c_hour <= 4 and c_hour > 12 :
+#     print("Good morning")
 
-elif c_hour >= 12 and c_hour <= 16 :
-    print("Good afternoon")
+# elif c_hour >= 12 and c_hour <= 16 :
+#     print("Good afternoon")
 
-elif c_hour >= 17 and c_hour <= 19 :
-    print("Good evening")
+# elif c_hour >= 17 and c_hour <= 19 :
+#     print("Good evening")
 
-elif c_hour == 20 or c_hour == 21 :
-    print("It's already night")
+# elif c_hour == 20 or c_hour == 21 :
+#     print("It's already night")
 
-else :
-    print("Good night") 
+# else :
+#     print("Good night") 

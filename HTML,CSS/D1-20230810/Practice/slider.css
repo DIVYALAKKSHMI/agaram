@@ -1,0 +1,142 @@
+.product {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.product-container {
+  padding: 20px 2vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 10px;
+  width: 156px;
+  height: 300px;
+  margin-right: 20px;
+}
+
+.product-image {
+  width: 150px;
+  height: 150px;
+  border: 1px solid gray;
+  overflow: hidden;
+}
+
+.product-thumb {
+  width: -webkit-fill-available;
+  /* height: 100%; */
+  padding : 22px;
+  object-fit: cover;
+}
+
+.discount-tag {
+  position: absolute;
+  border: 3px solid white;
+  background: orange;
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  right: 5px;
+  top: 50px;
+  text-transform: capitalize;
+}
+
+.product-name {
+  font-size:small;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+.product-info{
+  margin-top: 10px;
+}
+
+.price {
+  font-family :sans-serif;
+  color: gray;
+  font-size: 12px;
+  text-decoration:line-through;
+  font-weight: 600;
+  margin-right:16px;
+}
+
+.actual-price {
+  font-family: sans-serif;
+  font-size:0.9rem;
+  font-weight: 600;
+  margin-left:16px;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 2vw;
+  height: 20%;
+  position: absolute;
+  top: 146px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%); */
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+  width: 40px;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+.actual-price-1{
+  font-family: sans-serif;
+  font-size:0.9rem;
+  font-weight: 600;
+  margin: 4px 8px 4px 0px;
+  display: block;
+}
+
+.btn{
+  font-size: medium;
+  font-weight: bolder;
+  border: 0px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: #525252;
+  color: white;
+  cursor: pointer;
+}
+
+.move-down{
+  margin-top: 15px;
+}
+
+.move-up-1{
+  margin-top: -5px;
+}

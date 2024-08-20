@@ -16,7 +16,10 @@
                                 "Date_of_birth" : "06/06/2003",
                                 "Gender": "Female",
                                 "Marital_status": "Unmarried",
-                                "Address" : {"Door_no" :"36/18-A", "Street_name" :"East street", "Place" :"Vadalivillai", "Pincode" : 629002}},
+                                "Address" : {"Door_no" :"36/18-A",
+                                             "Street_name" :"East street",
+                                             "Place" :"Vadalivillai", 
+                                             "Pincode" : 629002}},
             "Declaration" : "I hereby declare the above information is true to my knowledge"}
 print(My_resume["Education_qualification"][1])
 print(My_resume["Personal_details"]["Date_of_birth"])
@@ -42,7 +45,7 @@ elif gender == "transgender" :
 else:
     print("Invalid Input")"""
 
-Total_marks = int(input("enter Total_marks"))
+Total_marks = int(input("enter Total_marks : "))
 if Total_marks > 92 :
     print("MBBS")
 elif Total_marks > 85 and Total_marks<= 92:

@@ -1,18 +1,20 @@
 #include <stdio.h>
 
+void fun1(int* b){
+    *b = *b + 10;
+    // printf("%d\n",*b);
+}
+
 void fun(){
      int a;
      a = 5;
      printf("%d\n",a);
      fun1(&a);
-    //  printf("%d\n",a);
+     printf("%d\n",a);
 
 }
 
-void fun1(int* b){
-    *b = *b + 10;
-    printf("%d\n",*b);
-}
+
 
 
 int main() {

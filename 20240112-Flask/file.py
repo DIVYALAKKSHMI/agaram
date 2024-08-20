@@ -3,6 +3,7 @@ from flask import render_template
 from flask_cors import CORS
 
 app = Flask(__name__) 
+print("value of app:",app)
 CORS(app)
 
 @app.route('/welcome')

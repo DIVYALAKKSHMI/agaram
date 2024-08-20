@@ -10,6 +10,6 @@ function State(){
     <Changeprop name={nme} words={()=>word(nme+1)}/>
     
     )
-}
+} 
 
 export default State;

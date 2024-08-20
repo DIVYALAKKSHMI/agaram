@@ -16,38 +16,38 @@ for mix in mixed_list :
         String_count += 1
 print("string count = ", String_count)"""
 
-"""Goldrate_asper_month = [{"month" : "January",
+Goldrate_asper_month = [{"month" : "January",
                         "goldrate" : 2599,
                         "jewel_list" : [{"jewel" : "chain",
-                                         "MC" : 12,
-                                         "jewel" : "ring",
+                                         "MC" : 12},
+                                         {"jewel" : "ring",
                                          "MC" : 10}]},
                         {"month" : "February",
                          "goldrate" : 3552,
                          "jewel_list" : [{"jewel" : "bangle",
-                                          "MC" : 8,
-                                          "jewel" : "ring",
+                                          "MC" : 8},
+                                          {"jewel" : "ring",
                                           "MC" : 0.10}]},
                         {"month" : "March",
                          "goldrate" : 3000,
                          "jewel_list" : [{ "jewel" :"ring",
-                                          "MC" : 0.10,
-                                          "jewel" : "anklet",
+                                          "MC" : 0.10},
+                                          {"jewel" : "anklet",
                                           "MC" : 0.11}]},
                         {"month" : "April",
                          "goldrate" : 2490,
                          "jewel_list" : [{"jewel" : "chain",
-                                         "MC" : 0.12,
-                                         "jewel" : "ring",
+                                         "MC" : 0.12},
+                                         {"jewel" : "ring",
                                          "MC" : 0.1}]},
                         {"month" : "May",
                          "goldrate" : 2111,
                          "jewel_list" : [{"jewel" : "chain" ,
-                                         "MC" : 0.12,
-                                         "jewel" : "ring",
-                                         "MC" : 0.10}]}]"""
+                                         "MC" : 0.12},
+                                         {"jewel" : "ring",
+                                         "MC" : 0.10}]}]
 
-"""Maximum_value = Goldrate_asper_month[0]["goldrate"]
+Maximum_value = Goldrate_asper_month[0]["goldrate"]
 Minimum_value = Goldrate_asper_month[0]["goldrate"]
 Max_month = None
 Min_month = None
@@ -59,44 +59,44 @@ for i in Goldrate_asper_month :
         Minimum_value = i["goldrate"]
         Min_month = i["month"]
 print(Maximum_value, "goldrate is higgher in", Max_month) 
-print(Minimum_value, "goldrate is lower in", Min_month) """
+print(Minimum_value, "goldrate is lower in", Min_month)
 
-"""for item in  Goldrate_asper_month:
+for item in  Goldrate_asper_month:
     
-    print( "Gold rate is " + str(item["goldrate"]))
+    print( "Gold rate in " + item["month"] + " is " + str(item["goldrate"]))
     jewel_list = item["jewel_list"]
     
     for j in jewel_list:
                         # 2000 * 13 /100
         cal_mak_charge = item["goldrate"] * j['MC'] / 100
         final_charge = item["goldrate"] + cal_mak_charge
-        print( j['jewel'] + "rate is "+ str(final_charge))"""
+        print( j['jewel'] + " price is "+ str(final_charge))
 
-user_details = [
+# user_details = [
                 
-                {
-                    "name" : "ajay",
-                    "marks" : [80,90,70,40,60]
-                },
-                {
-                    "name" : "manimala",
-                    "marks" : [100,80,40,90,70]
-                },
-                {
-                    "name" : "abarna",
-                    "marks" : [72,65,68,89,86]
-                }
-        ]
+#                 {
+#                     "name" : "ajay",
+#                     "marks" : [80,90,70,40,60]
+#                 },
+#                 {
+#                     "name" : "manimala",
+#                     "marks" : [100,80,40,90,70]
+#                 },
+#                 {
+#                     "name" : "abarna",
+#                     "marks" : [72,65,68,89,86]
+#                 }
+#         ]
         
         
         
-for student in user_details:
-    print(student['marks'])
-    total = 0
-    mark = student['marks']
-    for x in mark: 
-        total = total + x
-    print(total)
+# for student in user_details:
+#     print(student['marks'])
+#     total = 0
+#     mark = student['marks']
+#     for x in mark: 
+#         total = total + x
+#     print(total)
     
        
 

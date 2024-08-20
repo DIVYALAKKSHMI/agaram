@@ -1,9 +1,11 @@
 """Friend_names = ["Ashok","Krish","Ajay","Anish","Evangelin","Asmitha Bama","Arun","Divya","Abisha"] 
 print(Friend_names[5])"""
+
 """My_details = {"Name" : "Divya",
-              "Place": "Kottar"}
+                 "Place": "Kottar"}
 print(My_details["Name"]), print(My_details["Place"])"""
 #print program
+
 details = [ {"Name" : "abisha",
             "Place" : "ramanputhoor",
             "Hobbies" :["reading","watering plants","aari"]}, 

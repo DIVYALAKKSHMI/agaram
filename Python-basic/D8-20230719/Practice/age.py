@@ -37,16 +37,16 @@ else:
     print(c)"""
 
 
-a = int(input("Enter_first_integer"))
-b = int(input("Enter_second_integer"))
-c = int(input("Enter_third_integer"))
+a = int(input("Enter_first_integer :"))
+b = int(input("Enter_second_integer :"))
+c = int(input("Enter_third_integer :"))
 if a > b :
     if a > c :
         print(a)
-if b > c :
+elif b > c :
     if b > a :
-        print(b)
-if c > a :
+        print("b is the greatest num",b)
+elif c > a :
     if c > b :
         print(c) 
 

@@ -21,10 +21,10 @@ def dele(item) :
     if item in items :
         items.remove(item)
         return render_template('/todo.html',items=items)
-
+    
 
 @app.route('/update/<key>',methods=["GET","POST"])
-def update(key) :
+def update(key) :   
 
     if request.method == "POST" :
         items[int(key)] = request.form['updated_value']

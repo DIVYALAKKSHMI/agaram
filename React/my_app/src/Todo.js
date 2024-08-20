@@ -7,7 +7,7 @@ import User from "./user/user";
 import { Getuser } from "./user/user2";
 import { Navbar } from "./headnav";
 
-
+ 
 
 function Todo(props){
 
@@ -51,15 +51,18 @@ function Todo(props){
         
         
         
-        {/* <form>
+        <form>
        {inputvalue}
        <input type="text" placeholder="type here..." id="text" onKeyUp={(e)=>setinputvalue(e.target.value)}></input>
+
        <Button onClick={()=> setarrayvalue(
            [...todos,inputvalue]
        )}>ADD</Button>
-        </form> */}
+
+        </form> 
+
         <Getuser values = {todos} function = {setarrayvalue}/>
-        {/* <User /> */}
+        <User /> 
 
         </div> 
     )

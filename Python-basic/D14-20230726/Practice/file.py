@@ -8,11 +8,11 @@
 #     print(first_name + ' ' +last_name)
 # name()
 
-def combine_name(a,b) :
-    print(a+' '+b)
+# def combine_name(a,b) :
+#     print(a+' '+b)
 
-combine_name("Karka","academy") 
-combine_name("Ramesh","V")
+# combine_name("Karka","academy") 
+# combine_name("Ramesh","V")
 
 # first_name = input("Enter_firstname")
 # last_name = input("Enter_lastname")

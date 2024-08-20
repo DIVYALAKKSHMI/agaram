@@ -11,6 +11,7 @@ extra_toppings_periperi = 80
 soft_drinks_three = 45*3
 delivery_chargee = 50 
 total = (veg_pizza_two + extra_toppings_cheese + extra_toppings_periperi + soft_drinks_three + delivery_chargee)
-Gst = (total)* 0.18
+Gst = (total) * 0.18
 print(total + Gst)
 
+ 

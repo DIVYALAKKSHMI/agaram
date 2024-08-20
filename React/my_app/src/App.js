@@ -24,40 +24,40 @@ import {
 
 function App() { 
 
-  let [isLogged,setIsLogged] = useState({
-    loggin : false,
-    email : ""
-  })
+  // let [isLogged,setIsLogged] = useState({
+  //   loggin : false,
+  //   email : ""
+  // })
 
   
-  const router = createBrowserRouter([
-    {
-      path : '/',
-      element : <h2>welcome to Agaram</h2>
-    },
-    {
-      path : '/login',
-      element : <Log isLogged={isLogged} setIsLogged={setIsLogged}/>
-    },
-    {
-      path : '/todo',
-      element : <Todo isLogged={isLogged} setIsLogged={setIsLogged}/>
-    },
-    {
-      path : '/user',
-      element : <User isLogged={isLogged} setIsLogged={setIsLogged}/>
-    }
-  ])
+  // const router = createBrowserRouter([
+  //   {
+  //     path : '/',
+  //     element : <h2>welcome to Agaram</h2>
+  //   },
+  //   {
+  //     path : '/login',
+  //     element : <Log isLogged={isLogged} setIsLogged={setIsLogged}/>
+  //   },
+  //   {
+  //     path : '/todo',
+  //     element : <Todo isLogged={isLogged} setIsLogged={setIsLogged}/>
+  //   },
+  //   {
+  //     path : '/user',
+  //     element : <User isLogged={isLogged} setIsLogged={setIsLogged}/>
+  //   }
+  // ])
 
-  
 
   // let [name,change]=useState("Javascript")
   
   // let [num,changenum] = useState(0)
 
   // let num =0;
+                                     // ...behind useState
   // function changenum(){
-  //   num = num+1                                  ...behind useState
+  //   num = num+1                                  
   // }
   // changenum()
 
@@ -66,27 +66,31 @@ function App() {
     <div className="App">
 
       <header className="App-header">
-        {/* <Sub name = "Divya" place ="ngl" message ="can i help you?"/>
+        
+        <Sub name = "Divya" place ="ngl" message ="can i help you?"/>
         <Header />
 
         <h1>{name}</h1>
-        <Button variant = "primary" onClick={()=>change("React")} >change</Button> */}
-        {/* <Button variant = "primary" onClick={()=>change("Python")} >change</Button> */}
+        <Button variant = "primary" onClick={()=>change("React")} >change</Button> 
+        <Button variant = "primary" onClick={()=>change("Python")} >change</Button> 
 
         
-        {/* {num}
+        {num}
         <Button variant = "primary" onClick={()=>changenum(num+1)} >change number</Button>
 
         <State />
-         */}
-
-        {/* <Todo />   ...todolist table
         
-        <User />   ...namelist table */}
+
+        <Todo />   ...todolist table
+        
+        <User />   ...namelist table 
 
         <RouterProvider router={router}></RouterProvider>
     
-        {/* <Log /> */}
+         <Log /> 
+
+
+
       </header>
 
     </div>

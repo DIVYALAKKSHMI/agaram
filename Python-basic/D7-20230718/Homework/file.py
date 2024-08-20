@@ -1,6 +1,6 @@
-Name = input("Enter_Name")
-Gender = input("Enter_Gender")
-Age = int(input("Enter_Age"))
+Name = input("Enter_Name :")
+Gender = input("Enter_Gender :")
+Age = int(input("Enter_Age :"))
 if Age >= 60 and Gender == "male":
      print("Hi Mr.",Name,"you are a senior citizen") 
 elif Age >= 60 and Gender != "male" :

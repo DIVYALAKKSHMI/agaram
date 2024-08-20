@@ -1,0 +1,5 @@
+XAMPP MySQL server
+
+Apache web server - port - 81
+MySQL server - port - 3306
+

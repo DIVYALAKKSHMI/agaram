@@ -18,8 +18,8 @@ elif (Food_1 == "Bread" or Food_2 == "Bread") and (Food_1 == "Milk" or Food_2 ==
     print("total=3.52")"""
 
 
-Food_1 = input("Enter_Food_1")
-Food_2 = input("Enter_Food_2")
+Food_1 = input("Enter_Food_1 :")
+Food_2 = input("Enter_Food_2 :")
 User_foods = {"Milk" : "1.02",
               "Popcorn" : "2.5",
               "Bread" : "2.5"}
